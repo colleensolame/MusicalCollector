@@ -11,15 +11,28 @@ import UIKit
 class MusicalViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     
+    @IBOutlet weak var btnDelete: UIButton!
     @IBOutlet weak var musicalImageView: UIImageView!
     @IBOutlet weak var txtTitle: UITextField!
+    @IBOutlet weak var btnUpdate: UIButton!
     
     var imagePicker = UIImagePickerController()
+    var musical: Musical? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         imagePicker.delegate = self
+        
+        if musical != nil {
+            musicalImageView.image = UIImage(data: musical!.image as Data!)
+            txtTitle.text = musical!.title
+            
+            btnUpdate.setTitle("Update", for: .normal)
+        } else {
+            btnDelete.isHidden = true
+            
+        }
 
         // Do any additional setup after loading the view.
     }

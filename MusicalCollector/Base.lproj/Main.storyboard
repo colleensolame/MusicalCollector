@@ -38,7 +38,7 @@
                     <navigationItem key="navigationItem" id="Hw9-cj-zeo">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="MhS-qB-LXc">
                             <connections>
-                                <segue destination="ezz-jj-Ohg" kind="show" id="WAD-FC-m2k"/>
+                                <segue destination="ezz-jj-Ohg" kind="show" identifier="addMusical" id="WAD-FC-m2k"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -82,14 +82,20 @@
                                     <action selector="btnAdd:" destination="ezz-jj-Ohg" eventType="touchUpInside" id="Ada-QW-DxZ"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ezq-Vh-drC">
+                                <rect key="frame" x="165.5" y="354" width="45" height="30"/>
+                                <state key="normal" title="Delete"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Ttv-AB-4Rw" firstAttribute="centerX" secondItem="ErZ-QO-KZK" secondAttribute="centerX" id="8cF-95-Y7m"/>
+                            <constraint firstItem="Ezq-Vh-drC" firstAttribute="centerX" secondItem="ErZ-QO-KZK" secondAttribute="centerX" id="MNi-nm-NQm"/>
                             <constraint firstItem="HdF-Pu-P7N" firstAttribute="centerX" secondItem="ErZ-QO-KZK" secondAttribute="centerX" id="Op7-dy-a8H"/>
                             <constraint firstItem="Ttv-AB-4Rw" firstAttribute="top" secondItem="HdF-Pu-P7N" secondAttribute="bottom" constant="20" id="S1F-xx-h8p"/>
                             <constraint firstItem="HdF-Pu-P7N" firstAttribute="top" secondItem="ehF-5p-dNX" secondAttribute="bottom" constant="30" id="cgS-iA-lP8"/>
                             <constraint firstItem="ehF-5p-dNX" firstAttribute="centerX" secondItem="ErZ-QO-KZK" secondAttribute="centerX" id="igo-Rd-8pq"/>
+                            <constraint firstItem="Ezq-Vh-drC" firstAttribute="top" secondItem="Ttv-AB-4Rw" secondAttribute="bottom" constant="10" id="k5P-K0-b1y"/>
                             <constraint firstItem="HdF-Pu-P7N" firstAttribute="width" secondItem="ehF-5p-dNX" secondAttribute="width" id="q4A-5e-aoF"/>
                             <constraint firstItem="ehF-5p-dNX" firstAttribute="top" secondItem="eMs-1U-uwG" secondAttribute="bottom" constant="20" id="zKd-MC-NAR"/>
                         </constraints>
@@ -109,6 +115,8 @@
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
+                        <outlet property="btnDelete" destination="Ezq-Vh-drC" id="oGb-ii-HqC"/>
+                        <outlet property="btnUpdate" destination="Ttv-AB-4Rw" id="b77-yl-25G"/>
                         <outlet property="musicalImageView" destination="ehF-5p-dNX" id="dLr-3v-WjG"/>
                         <outlet property="txtTitle" destination="HdF-Pu-P7N" id="Nnp-AY-b9g"/>
                     </connections>

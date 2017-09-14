@@ -49,5 +49,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         cell.imageView?.image = UIImage(data: musical.image as Data!)
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let musical = musicals[indexPath.row]
+        performSegue(withIdentifier: "addMusical", sender: musical)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let nextVC = segue.destination as! MusicalViewController
+        nextVC.musical = sender as? Musical
+    }
 }
 
