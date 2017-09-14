@@ -8,14 +8,18 @@
 
 import UIKit
 
-class MusicalViewController: UIViewController {
+class MusicalViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     
     @IBOutlet weak var musicalImageView: UIImageView!
     @IBOutlet weak var txtTitle: UITextField!
     
+    var imagePicker = UIImagePickerController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        imagePicker.delegate = self
 
         // Do any additional setup after loading the view.
     }
@@ -24,14 +28,32 @@ class MusicalViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        let image = info[UIImagePickerControllerOriginalImage] as! UIImage
+        musicalImageView.image = image
+        imagePicker.dismiss(animated: true, completion: nil)
+    }
 
     @IBAction func btnCamera(_ sender: Any) {
     }
     
     @IBAction func btnPhotos(_ sender: Any) {
+        imagePicker.sourceType = .photoLibrary
+        present(imagePicker, animated: true, completion: nil)
+    
+    }
+
+    @IBAction func btnAdd(_ sender: Any) {
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        
+        let musical = Musical(context: context)
+        musical.title = txtTitle.text
+        musical.image = UIImageJPEGRepresentation(musicalImageView.image!, 1)
+        
+        (UIApplication.shared.delegate as! AppDelegate).saveContext()
+        
     }
     
-    @IBAction func btnAdd(_ sender: Any) {
-    }
     
 }
