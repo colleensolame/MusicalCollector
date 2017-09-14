@@ -13,7 +13,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MusicalCollector" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="ViewController" customModule="MusicalCollector" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -21,7 +21,19 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3br-CF-LNP">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="3br-CF-LNP" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="9fV-dO-uq9"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="3br-CF-LNP" secondAttribute="bottom" id="KUs-WK-sgp"/>
+                            <constraint firstItem="3br-CF-LNP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="d6X-xy-eAZ"/>
+                            <constraint firstAttribute="trailing" secondItem="3br-CF-LNP" secondAttribute="trailing" id="oQ5-oe-wFn"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Hw9-cj-zeo">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="MhS-qB-LXc">
@@ -30,6 +42,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="musicalTableView" destination="3br-CF-LNP" id="kQ0-PP-Vgx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

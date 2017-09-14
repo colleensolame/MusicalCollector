@@ -49,11 +49,10 @@ class MusicalViewController: UIViewController, UIImagePickerControllerDelegate, 
         
         let musical = Musical(context: context)
         musical.title = txtTitle.text
-        musical.image = UIImageJPEGRepresentation(musicalImageView.image!, 1)
+        musical.image = UIImagePNGRepresentation(musicalImageView.image!) as NSData?
         
         (UIApplication.shared.delegate as! AppDelegate).saveContext()
-        
+        navigationController!.popViewController(animated: true)
     }
-    
     
 }
