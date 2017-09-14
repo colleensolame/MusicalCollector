@@ -13,6 +13,8 @@
 		0F35DE2A1F6A51F4005FB540 /* MusicalCollector.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0F35DE281F6A51F4005FB540 /* MusicalCollector.xcdatamodeld */; };
 		0F35DE2C1F6A51F4005FB540 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F35DE2B1F6A51F4005FB540 /* Assets.xcassets */; };
 		0F35DE2F1F6A51F4005FB540 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F35DE2D1F6A51F4005FB540 /* LaunchScreen.storyboard */; };
+		0F35DE371F6A5884005FB540 /* f23.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F35DE361F6A5884005FB540 /* f23.png */; };
+		0F35DE391F6A5995005FB540 /* MusicalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F35DE381F6A5995005FB540 /* MusicalViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		0F35DE2B1F6A51F4005FB540 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0F35DE2E1F6A51F4005FB540 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0F35DE301F6A51F4005FB540 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0F35DE361F6A5884005FB540 /* f23.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = f23.png; sourceTree = "<group>"; };
+		0F35DE381F6A5995005FB540 /* MusicalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicalViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,8 @@
 			children = (
 				0F35DE211F6A51F4005FB540 /* AppDelegate.swift */,
 				0F35DE231F6A51F4005FB540 /* ViewController.swift */,
+				0F35DE381F6A5995005FB540 /* MusicalViewController.swift */,
+				0F35DE361F6A5884005FB540 /* f23.png */,
 				0F35DE251F6A51F4005FB540 /* Main.storyboard */,
 				0F35DE2B1F6A51F4005FB540 /* Assets.xcassets */,
 				0F35DE2D1F6A51F4005FB540 /* LaunchScreen.storyboard */,
@@ -127,6 +133,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F35DE2F1F6A51F4005FB540 /* LaunchScreen.storyboard in Resources */,
+				0F35DE371F6A5884005FB540 /* f23.png in Resources */,
 				0F35DE2C1F6A51F4005FB540 /* Assets.xcassets in Resources */,
 				0F35DE271F6A51F4005FB540 /* Main.storyboard in Resources */,
 			);
@@ -142,6 +149,7 @@
 				0F35DE241F6A51F4005FB540 /* ViewController.swift in Sources */,
 				0F35DE2A1F6A51F4005FB540 /* MusicalCollector.xcdatamodeld in Sources */,
 				0F35DE221F6A51F4005FB540 /* AppDelegate.swift in Sources */,
+				0F35DE391F6A5995005FB540 /* MusicalViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
