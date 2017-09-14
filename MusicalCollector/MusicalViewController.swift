@@ -9,7 +9,7 @@
 import UIKit
 
 class MusicalViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-
+    
     
     @IBOutlet weak var btnDelete: UIButton!
     @IBOutlet weak var musicalImageView: UIImageView!
@@ -33,10 +33,10 @@ class MusicalViewController: UIViewController, UIImagePickerControllerDelegate, 
             btnDelete.isHidden = true
             
         }
-
+        
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -47,25 +47,39 @@ class MusicalViewController: UIViewController, UIImagePickerControllerDelegate, 
         musicalImageView.image = image
         imagePicker.dismiss(animated: true, completion: nil)
     }
-
+    
     @IBAction func btnCamera(_ sender: Any) {
+        imagePicker.sourceType = .camera
+        present(imagePicker, animated: true, completion: nil)
     }
     
     @IBAction func btnPhotos(_ sender: Any) {
         imagePicker.sourceType = .photoLibrary
         present(imagePicker, animated: true, completion: nil)
-    
-    }
-
-    @IBAction func btnAdd(_ sender: Any) {
-        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         
-        let musical = Musical(context: context)
-        musical.title = txtTitle.text
-        musical.image = UIImagePNGRepresentation(musicalImageView.image!) as NSData?
+    }
+    
+    @IBAction func btnAdd(_ sender: Any) {
+        if musical != nil {
+            musical!.title = txtTitle.text
+            musical!.image = UIImagePNGRepresentation(musicalImageView.image!) as NSData?
+        } else {
+            
+            let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+            
+            let musical = Musical(context: context)
+            musical.title = txtTitle.text
+            musical.image = UIImagePNGRepresentation(musicalImageView.image!) as NSData?
+        }
         
         (UIApplication.shared.delegate as! AppDelegate).saveContext()
         navigationController!.popViewController(animated: true)
     }
     
+    @IBAction func btnDel(_ sender: Any) {
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        
+        context.delete(musical!)
+        navigationController!.popViewController(animated: true)
+    }
 }

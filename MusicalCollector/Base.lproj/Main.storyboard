@@ -85,6 +85,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ezq-Vh-drC">
                                 <rect key="frame" x="165.5" y="354" width="45" height="30"/>
                                 <state key="normal" title="Delete"/>
+                                <connections>
+                                    <action selector="btnDel:" destination="ezz-jj-Ohg" eventType="touchUpInside" id="nNq-nq-6DS"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -115,7 +118,7 @@
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
-                        <outlet property="btnDelete" destination="Ezq-Vh-drC" id="oGb-ii-HqC"/>
+                        <outlet property="btnDelete" destination="Ezq-Vh-drC" id="k6t-r8-Mdm"/>
                         <outlet property="btnUpdate" destination="Ttv-AB-4Rw" id="b77-yl-25G"/>
                         <outlet property="musicalImageView" destination="ehF-5p-dNX" id="dLr-3v-WjG"/>
                         <outlet property="txtTitle" destination="HdF-Pu-P7N" id="Nnp-AY-b9g"/>

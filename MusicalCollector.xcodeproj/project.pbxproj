@@ -105,6 +105,7 @@
 				TargetAttributes = {
 					0F35DE1D1F6A51F4005FB540 = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = TG7VCJP2SB;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -274,6 +275,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = TG7VCJP2SB;
 				INFOPLIST_FILE = MusicalCollector/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ZND-Code.MusicalCollector";
@@ -286,6 +288,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = TG7VCJP2SB;
 				INFOPLIST_FILE = MusicalCollector/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ZND-Code.MusicalCollector";
@@ -313,6 +316,7 @@
 				0F35DE351F6A51F4005FB540 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
