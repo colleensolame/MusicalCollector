@@ -59,5 +59,20 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let nextVC = segue.destination as! MusicalViewController
         nextVC.musical = sender as? Musical
     }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            let musical = musicals[indexPath.row]
+            let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+            context.delete(musical)
+            (UIApplication.shared.delegate as! AppDelegate).saveContext()
+            do {
+                try musicals = context.fetch(Musical.fetchRequest())
+                musicalTableView.reloadData()
+            } catch {}
+            
+        }
+    }
+
 }
 

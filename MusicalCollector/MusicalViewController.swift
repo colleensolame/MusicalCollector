@@ -75,11 +75,4 @@ class MusicalViewController: UIViewController, UIImagePickerControllerDelegate, 
         (UIApplication.shared.delegate as! AppDelegate).saveContext()
         navigationController!.popViewController(animated: true)
     }
-    
-    @IBAction func btnDel(_ sender: Any) {
-        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-        
-        context.delete(musical!)
-        navigationController!.popViewController(animated: true)
     }
-}
