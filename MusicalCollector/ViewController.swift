@@ -47,6 +47,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let musical = musicals[indexPath.row]
         cell.textLabel?.text = musical.title
         cell.imageView?.image = UIImage(data: musical.image as Data!)
+        
         return cell
     }
     

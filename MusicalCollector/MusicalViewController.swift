@@ -10,8 +10,6 @@ import UIKit
 
 class MusicalViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
-    
-    @IBOutlet weak var btnDelete: UIButton!
     @IBOutlet weak var musicalImageView: UIImageView!
     @IBOutlet weak var txtTitle: UITextField!
     @IBOutlet weak var btnUpdate: UIButton!
@@ -29,9 +27,6 @@ class MusicalViewController: UIViewController, UIImagePickerControllerDelegate, 
             txtTitle.text = musical!.title
             
             btnUpdate.setTitle("Update", for: .normal)
-        } else {
-            btnDelete.isHidden = true
-            
         }
         
         // Do any additional setup after loading the view.
